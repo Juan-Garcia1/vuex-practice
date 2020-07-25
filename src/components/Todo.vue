@@ -1,7 +1,9 @@
 <template>
   <div class="todo">
     <p class="todo__id">ID:{{ todo.id }}</p>
-    <h2 class="todo__title">{{ todo.title }}</h2>
+    <router-link :to="{ name: 'Todo', params: { todoId: todo.id } }">
+      <h2 class="todo__title">{{ todo.title }}</h2>
+    </router-link>
     <p class="todo__completed">Completed: {{ todo.completed }}</p>
     <hr />
   </div>
